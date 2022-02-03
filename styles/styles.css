@@ -1,0 +1,648 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("../images/fondo.jpg");
+    background-position: top center;
+    height: 100vh;
+    width: 100%;
+}
+
+@media screen and (max-width: 480px) {
+
+    /*logo y titulo */
+
+
+h1 {
+    grid-area: titulo;
+    color: rgb(255, 255, 255);
+    height: 3%;
+    margin-top: 3%;
+    padding: 20px;
+    font-family: 'Island Moments', cursive;
+    font-size: 47px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;
+    font-weight: bold  
+  
+}
+
+h2 {
+    grid-area: subtitulo;
+    color: rgb(0, 0, 0);
+    height: 1%;
+    margin-top: 1%;
+    padding: 5px;
+    font-family: 'Licorice', cursive; 
+    font-size: 14px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;
+    font-weight: bold  
+  
+}
+
+/* Barra de menu */
+
+
+.inicio {
+    display: block;
+    height: 20px;
+    padding: 3px;
+    margin-top: 5px;
+    border: 1px solid rgb(247, 160, 250);  
+    background-image: linear-gradient(to right, white , rgb(209, 110, 248));
+    color: rgb(224, 100, 255);
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+}
+
+li:hover {
+padding: 3px;
+color: rgb(119, 201, 255);
+transform: scale(1,1.2);
+transition: ease 0.1s;
+}
+
+nav {
+display: flex;
+flex-direction: row;
+justify-content:center;
+grid-area: menu;
+margin-top: 2%;
+padding: 20px;
+width: 100%;
+height: 5%px;
+}
+
+/*contenido */
+
+main {
+    grid-area: contenido;
+    background: white;
+    width: 80%;
+    height: 100vh;
+    margin-top: 5%;
+    padding: 5px;
+    display: block;
+}
+
+section {
+    width: 100%;
+    margin-top: 20px;
+    font-family: Arial, Verdana, Tahoma, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+  
+}
+
+aside {
+    margin-top: 10px;
+}
+
+.form {
+    margin-left: 37%;
+    border: 1px solid black;
+    background-color: #fff;
+    text-align: left;
+    width: 30%;
+}
+
+form {
+    margin: 5px;
+}
+
+.contacto {
+    display: block;
+    text-align: left;
+}
+
+.productos {
+    display: block;
+    text-align: left;
+    margin-bottom: 25px;
+    list-style:none
+}
+
+.mainCompra {
+    height: auto;
+}
+
+fieldset {
+    background-color: rgb(251, 232, 252);
+}
+
+/*imagenes */
+
+.mini {
+    display: inline;
+    margin-bottom: 5px;
+    margin-left: 13%;
+    height: 130px;
+}
+
+.grande {
+    margin: 10px 0px 10px 20%;
+}
+
+/* pie de pagina */
+
+footer { 
+    grid-area: pie;
+    text-align: center;
+    color: white;
+    font-size: 10px;
+}
+
+/* Grid Areas */
+
+#gridIndex {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza"
+    "menu"
+    "contenido"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+#gridProductos {
+    display: grid;
+
+    grid-template-areas:
+    "menu"
+    "contenido"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+#generalHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+        /*logo y titulo */
+
+
+h1 {
+    grid-area: titulo;
+    color: rgb(255, 255, 255);
+    height: 3%;
+    margin-top: 3%;
+    padding: 20px;
+    font-family: 'Island Moments', cursive;
+    font-size: 100px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+    font-weight: bold
+  
+}
+
+h2 {
+    grid-area: subtitulo;
+    color: rgb(0, 0, 0);
+    height: 1%;
+    margin-top: 1%;
+    padding: 5px;
+    font-family: 'Licorice', cursive; 
+    font-size: 22px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+    font-weight: bold
+  
+}
+
+/* Barra de menu */
+
+
+.inicio {
+    display: block;
+    height: 20px;
+    padding: 3px;
+    margin-top: 5px;
+    border: 1px solid rgb(247, 160, 250);  
+    background-image: linear-gradient(to left, white , rgb(209, 110, 248));
+    color: rgb(224, 100, 255);
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+}
+
+li:hover {
+padding: 3px;
+background-color: rgb(234, 182, 255);
+color: rgb(119, 201, 255);
+transform: scale(1,1.2);
+transition: ease 0.1s;
+}
+
+nav {
+display: flex;
+flex-direction: row;
+justify-content:center;
+grid-area: menu;
+margin-top: 2%;
+padding: 20px;
+width: 100%;
+height: 5%px;
+}
+
+/*contenido */
+
+main {
+    grid-area: contenido;
+    background: white;
+    width: 80%;
+    height: 100vh;
+    margin-top: 5%;
+    padding: 5px;
+    display: block;
+}
+
+section {
+    width: 100%;
+    margin-top: 20px;
+    font-family: Arial, Verdana, Tahoma, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+  
+}
+
+aside {
+    margin-top: 10px;
+    display: inline;
+    width: 30%;
+    height: fit-content;
+}
+
+.form {
+    margin-left: 37%;
+    border: 1px solid black;
+    background-color: #fff;
+    text-align: left;
+    width: 30%;
+}
+
+form {
+    margin: 5px;
+}
+
+.contacto {
+    display: block;
+    text-align: left;
+}
+
+.productos {
+    display: block;
+    text-align: left;
+    margin-bottom: 25px;
+    list-style:none
+}
+
+.mainCompra {
+    height: auto;
+}
+
+fieldset {
+    background-color: rgb(251, 232, 252);
+}
+
+/*imagenes */
+
+.mini {
+    width: 150px;
+    height: 200px;
+    display: inline;
+    margin-bottom: 5px;
+    margin-left: 20%;
+}
+
+.grande {
+    width: 350px;
+    margin: 10px 0px 10px 27%;
+}
+
+/* pie de pagina */
+
+footer { 
+    grid-area: pie;
+    text-align: right;
+    color: white;
+}
+
+/* Grid Areas */
+
+#gridIndex {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza"
+    "menu"
+    "contenido"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+#gridProductos {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza"
+    "menu"
+    "contenido"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+#generalHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+
+
+
+@media screen and (min-width: 1024px) {
+
+/*logo y titulo */
+
+
+h1 {
+    grid-area: titulo;
+    /*background-color: #ace7ff; */
+    color: rgb(255, 255, 255);
+    /*width: 20%;*/
+    height: 3%;
+    margin-top: 3%;
+    padding: 20px;
+    font-family: 'Island Moments', cursive;
+    font-size: 100px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+    font-weight: bold
+}
+
+h2 {
+    grid-area: subtitulo;
+    /*background-color: rgb(255, 255, 255);*/
+    color: rgb(0, 0, 0);
+    /*width: 20%;*/
+    height: 1%;
+    margin-top: 1%;
+    padding: 5px;
+    font-family: 'Licorice', cursive; 
+    font-size: 22px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+    font-weight: bold
+  
+}
+
+/* Barra de menu */
+
+
+.inicio {
+    display: inline;
+    height: 20px;
+    padding: 3px;
+    border: 1px solid rgb(247, 160, 250);  
+    /*background-color: white; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+}
+
+li:hover {
+padding: 3px;
+background-color: rgb(234, 182, 255);
+color: rgb(119, 201, 255);
+}
+
+nav {
+display: flex;
+flex-direction: row;
+justify-content:center;
+grid-area: menu;
+margin-top: 2%;
+padding: 20px;
+width: 100%;
+height: 5px;
+}
+
+/*contenido */
+
+main {
+    grid-area: contenido;
+    background: white;
+    width: 80%;
+    height: 100vh;
+    margin-top: 5%;
+    /*margin-left: 15%;*/
+    padding: 5px;
+    display: block;
+}
+
+section {
+    width: 100%;
+    margin-top: 20px;
+    font-family: Arial, Verdana, Tahoma, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 3px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: center;  
+  
+}
+
+aside { 
+    margin-top: 20px;
+    width: 30%;
+    margin-left: 39%;
+}
+
+.form {
+    margin-left: 37%;
+    border: 1px solid black;
+    background-color: #fff;
+    text-align: left;
+    width: 30%;
+}
+
+form {
+    margin: 5px;
+}
+
+.contacto {
+    display: block;
+    text-align: left;
+}
+
+.productos {
+    display: block;
+    text-align: left;
+}
+
+.mainCompra {
+    height: auto;
+}
+
+fieldset {
+    background-color: rgb(251, 232, 252);
+    
+}
+
+.carrusel {
+    color: rgba(0, 0, 0, 0.836);
+    background-color: rgba(255, 255, 255, 0.342);
+}
+
+/*imagenes */
+
+.mini {
+    display: inline;
+    margin: 5px;
+    height: 130px;
+}
+
+.grande {
+    margin: 10px;
+    display:block;
+}
+
+/* pie de pagina */
+
+footer { 
+    grid-area: pie;
+    text-align: right;
+    color: white;
+}
+
+/* Grid Areas */
+
+#gridIndex {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza cabeza cabeza"
+    "menu menu menu"
+    "contenido contenido contenido"
+    "none pie pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+#generalHeader {
+
+    grid-area: cabeza;
+    display: grid;
+
+    grid-template-areas: 
+    "logo titulo"
+    "logo subtitulo"
+    ;
+
+    grid-template-columns: 5% 95%;
+    grid-template-rows: 50% 50%;
+}
+
+#gridProductos {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza cabeza cabeza"
+    "menu menu menu"
+    "contenido contenido contenido"
+    "none pie pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+}

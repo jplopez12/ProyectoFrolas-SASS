@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../images/frolas_logo.png">
+        <title>Frolas Cakes</title>
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="styles/styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Licorice&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Island+Moments&family=Licorice&display=swap" rel="stylesheet">
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    </head>
+
+    <body>
+
+        <header id="generalHeader">
+            <a href="../index.html"><img class="logo" src="../images/frolas_logo.png" width="150"></a> 
+            <h1 class="animate__animated animate__bounceInDown">Frolas</h1>
+            <h2 class="animate__animated animate__zoomInDown">Pastelería artesanal</h2>
+        </header>
+    
+    <section  id="gridCompras">
+            <nav>
+                <ul>
+                    <li class="inicio"><a href="../index.html">Inicio</a></li>
+                    <li class="inicio"><a href="productos.html">Productos</a></li>
+                    <li class="inicio"><a href="ventas.html">Información sobre entregas</a></li>
+                    <li class="inicio"><a href="contacto.html" target="blank">Contacto</a></li>
+                </ul>
+            </nav>
+
+        <main class="mainCompra">
+        <section>
+            <article>
+                <table border="1" cellpadding="1" cellspacing="1">
+                    <tr>
+                        <th>Especialidad</th>
+                        <th>Descripción</th>
+                        <th>Precio</th>
+                        <th>Producto</th>
+                    </tr>
+                    <tr>
+                        <td>Torta de crema</td>
+                        <td>Torta sabor vainilla, 500 g de peso, con relleno de crema y frutillas</td>
+                        <td>$1.000</td>
+                        <td><img src="../images/torta1.jpeg" width="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Chocotorta</td>
+                        <td>Tarta de galletitas sabor chocolate con queso crema y dulce de leche</td>
+                        <td>$700</td>
+                        <td><img src="../images/chocotorta.jpeg" width="100"></td>
+                    </tr>
+                    <tr>
+                        <td>Box día de la madre</td>
+                        <td>Torta brownie con dulce de leche y merengue, shot lemon pie, mini frolita (membrillo, batata o dulce de leche), dos alfajores de cacao rellenos de dulce de leche</td>
+                        <td>$875</td>
+                        <td><img src="../images/box_dia_de_la_madre.jpeg" width="150"></td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+        <hr>
+        <section class="form">
+            <form>
+                <fieldset>
+                <legend>Producto:</legend> <br>
+                <div>Torta de crema</div>
+                <input type="checkbox" name="producto" value="torta_de_crema"/> <br>
+                <div>Chocotorta</div>
+                <input type="checkbox" name="producto" value="chocotorta"/> <br>
+                <div>Box día de la madre</div>
+                <input type="checkbox" name="producto" value="box_dia_de_la_madre"/> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Domicilio</legend> <br>
+                <label for="calle">Calle:</label>	
+                <input type="text" name="calle"/>
+                <label for="altura">Altura:</label>	
+                <input type="text" name="altura"/> <br>
+            </fieldset>    
+            <fieldset>
+                <legend>¿Es para regalar?</legend>
+                <select name="envolver para regalo"> 
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+                </select>
+                <br>
+            </fieldset>
+            <fieldset>
+                <label for="comentarios">Comentarios:</label> <br>
+                <textarea name="comentarios" cols="25" rows="5"></textarea> <br>
+                <input type="submit" value="enviar"/>
+                <input type="submit" value="limpiar formulario"/>
+            </fieldset>
+            </form>
+        </section>
+        </main>
+        <footer>
+            <p>Frolas Cakes - &copy;2022 - Desarrollado por: López, Juan Pablo</p>
+         </footer>
+        </section>
+    </body>
+</html>
