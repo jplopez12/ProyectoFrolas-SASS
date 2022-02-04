@@ -15,7 +15,7 @@ body {
     /*logo y titulo */
 
 
-h1 {
+h1, .titulo {
     grid-area: titulo;
     color: rgb(255, 255, 255);
     height: 3%;
@@ -31,7 +31,7 @@ h1 {
   
 }
 
-h2 {
+h2, .subtitulo {
     grid-area: subtitulo;
     color: rgb(0, 0, 0);
     height: 1%;
@@ -49,10 +49,10 @@ h2 {
 
 /* Barra de menu */
 
-
 .inicio {
     display: block;
-    height: 20px;
+    margin-left: -12%;
+    height: auto;
     padding: 3px;
     margin-top: 5px;
     border: 1px solid rgb(247, 160, 250);  
@@ -74,14 +74,14 @@ transition: ease 0.1s;
 }
 
 nav {
-display: flex;
-flex-direction: row;
-justify-content:center;
 grid-area: menu;
-margin-top: 2%;
+display: flex;
+flex-direction: column;
+align-content: flex-end;
+justify-content:center;
 padding: 20px;
 width: 100%;
-height: 5%px;
+height: fit-content;
 }
 
 /*contenido */
@@ -90,8 +90,8 @@ main {
     grid-area: contenido;
     background: white;
     width: 80%;
-    height: 100vh;
-    margin-top: 5%;
+    height: fit-content;
+    margin-top: 2%;
     padding: 5px;
     display: block;
 }
@@ -166,6 +166,20 @@ footer {
     font-size: 10px;
 }
 
+#containerProductos {
+    grid-area: contenido;
+
+}
+
+.productos { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    margin-top: 5px;
+}
 /* Grid Areas */
 
 #gridIndex {
@@ -174,6 +188,7 @@ footer {
     grid-template-areas:
     "cabeza"
     "menu"
+    "none"
     "contenido"
     "pie"
     ;
@@ -187,6 +202,7 @@ footer {
     display: grid;
 
     grid-template-areas:
+    "cabeza"
     "menu"
     "contenido"
     "pie"
@@ -220,7 +236,7 @@ footer {
         /*logo y titulo */
 
 
-h1 {
+h1, .titulo {
     grid-area: titulo;
     color: rgb(255, 255, 255);
     height: 3%;
@@ -236,7 +252,7 @@ h1 {
   
 }
 
-h2 {
+h2, .subtitulo {
     grid-area: subtitulo;
     color: rgb(0, 0, 0);
     height: 1%;
@@ -296,7 +312,7 @@ main {
     grid-area: contenido;
     background: white;
     width: 80%;
-    height: 100vh;
+    height: fit-content;
     margin-top: 5%;
     padding: 5px;
     display: block;
@@ -376,6 +392,20 @@ footer {
     color: white;
 }
 
+#containerProductos {
+    grid-area: contenido;
+
+}
+
+.productos { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    margin-top: 5px;
+}
 /* Grid Areas */
 
 #gridIndex {
@@ -384,6 +414,7 @@ footer {
     grid-template-areas:
     "cabeza"
     "menu"
+    "none"
     "contenido"
     "pie"
     ;
@@ -402,6 +433,7 @@ footer {
     "contenido"
     "pie"
     ;
+
 
     grid-template-columns: auto;
     grid-template-rows: auto;
@@ -433,7 +465,7 @@ footer {
 /*logo y titulo */
 
 
-h1 {
+h1, .titulo {
     grid-area: titulo;
     /*background-color: #ace7ff; */
     color: rgb(255, 255, 255);
@@ -450,7 +482,7 @@ h1 {
     font-weight: bold
 }
 
-h2 {
+h2, .subtitulo {
     grid-area: subtitulo;
     /*background-color: rgb(255, 255, 255);*/
     color: rgb(0, 0, 0);
@@ -465,9 +497,18 @@ h2 {
     line-height: 18px; 
     text-align: center;  
     font-weight: bold
-  
 }
 
+h3 {
+    margin-top: 2%;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 14px; 
+    letter-spacing: 5px;
+    word-spacing: 10px;
+    line-height: 18px; 
+    text-align: left; 
+}
 /* Barra de menu */
 
 
@@ -475,7 +516,7 @@ h2 {
     display: inline;
     height: 20px;
     padding: 3px;
-    border: 1px solid rgb(247, 160, 250);  
+    /*border: 1px solid rgb(247, 160, 250);*/  
     /*background-color: white; */
     color: white;
     font-family: Arial, Helvetica, sans-serif; 
@@ -486,10 +527,23 @@ h2 {
     text-align: center;  
 }
 
-li:hover {
-padding: 3px;
-background-color: rgb(234, 182, 255);
+li {
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 1s;
+}
+ 
+li:hover, li:visited, li:link, h3:hover {
+/*background-color: rgb(234, 182, 255);*/
 color: rgb(119, 201, 255);
+background-size: 100% 2px;
+}
+
+h3:hover {
+    cursor: default;
 }
 
 nav {
@@ -506,7 +560,6 @@ height: 5px;
 /*contenido */
 
 main {
-    grid-area: contenido;
     background: white;
     width: 80%;
     height: 100vh;
@@ -529,9 +582,16 @@ section {
 }
 
 aside { 
-    margin-top: 20px;
-    width: 30%;
-    margin-left: 39%;
+    grid-area: aside;
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    object-fit: contain;
+}
+
+article {
+    grid-area: articulo;
 }
 
 .form {
@@ -552,8 +612,43 @@ form {
 }
 
 .productos {
-    display: block;
-    text-align: left;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+}
+
+#containerProductos {
+    grid-area: productos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: productos;
+    height: fit-content;
+}
+
+
+#botonCompra {
+    grid-area: boton;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.itemProductos {
+    list-style: none;
+    background-color: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size 1s;
+}
+
+.itemProductos:hover, .itemProductos:focus {
+    background-size: 100% 2px;
+    background-color: #fff;
 }
 
 .mainCompra {
@@ -572,26 +667,24 @@ fieldset {
 
 /*imagenes */
 
-.mini {
-    display: inline;
-    margin: 5px;
-    height: 130px;
-}
-
-.grande {
-    margin: 10px;
-    display:block;
-}
 
 /* pie de pagina */
 
 footer { 
     grid-area: pie;
-    text-align: right;
+    text-align: center;
     color: white;
 }
 
 /* Grid Areas */
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
 
 #gridIndex {
     display: grid;
@@ -599,8 +692,9 @@ footer {
     grid-template-areas:
     "cabeza cabeza cabeza"
     "menu menu menu"
-    "contenido contenido contenido"
-    "none pie pie"
+    "aside aside aside"
+    "articulo articulo articulo"
+    "pie pie pie"
     ;
 
     grid-template-columns: auto;
@@ -609,40 +703,28 @@ footer {
 }
 
 #generalHeader {
-
-    grid-area: cabeza;
-    display: grid;
-
-    grid-template-areas: 
-    "logo titulo"
-    "logo subtitulo"
-    ;
-
-    grid-template-columns: 5% 95%;
-    grid-template-rows: 50% 50%;
+    grid-area: cabezaGeneral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 #gridProductos {
     display: grid;
 
     grid-template-areas:
-    "cabeza cabeza cabeza"
+    "cabezaGeneral cabezaGeneral cabezaGeneral"
     "menu menu menu"
-    "contenido contenido contenido"
-    "none pie pie"
+    "productos productos productos"
+    "pie pie pie"
     ;
 
     grid-template-columns: auto;
     grid-template-rows: auto;
     justify-items: center;
-}
-
-#indexHeader {
-    grid-area: cabeza;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    ;
 }
 
 }
