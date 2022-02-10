@@ -1,0 +1,178 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0; }
+
+/***************** size, family y color de fuente *****************/
+h1, .titulo {
+  color: white;
+  font-family: 'Island Moments', cursive;
+  font-size: 100px; }
+
+h2, .subtitulo {
+  color: black;
+  font-family: 'Licorice', cursive;
+  font-size: 22px; }
+
+h3 {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px; }
+
+nav {
+  margin-top: 2%;
+  padding: 20px;
+  width: 100%;
+  height: 5px; }
+  nav ul {
+    padding-left: 0px; }
+    nav ul li {
+      color: #f7a0fa;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px; }
+
+section {
+  width: 100%;
+  margin-top: 20px; }
+  section p {
+    font-family: Arial, Verdana, Tahoma, sans-serif;
+    font-size: 14px;
+    color: black; }
+
+footer {
+  font-family: Arial, Verdana, Tahoma, sans-serif;
+  color: white;
+  font-size: 10px; }
+
+/***************** bg y main *****************/
+body {
+  background-image: url("../images/fondo.jpg");
+  background-position: top center;
+  height: 100vh;
+  width: 100%; }
+
+main {
+  background: white;
+  width: 80%;
+  height: 100vh;
+  margin-top: 5%;
+  padding: 5px;
+  display: block; }
+
+/***************** Modelado de cajas y decoración de textos *****************/
+h1, .titulo {
+  height: 3%;
+  margin-top: 3%;
+  padding: 20px;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold; }
+
+h2, .subtitulo {
+  height: 1%;
+  margin-top: 1%;
+  padding: 5px;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: bold; }
+
+h3 {
+  margin-top: 2%;
+  letter-spacing: 5px;
+  word-spacing: 10px;
+  line-height: 18px;
+  text-align: left; }
+
+h3:hover {
+  color: #77c9ff;
+  background-size: 100% 2px;
+  cursor: default; }
+
+nav {
+  margin-top: 2%;
+  padding: 20px;
+  width: 100%;
+  height: 5px; }
+  nav ul {
+    padding-left: 0px; }
+    nav ul li {
+      display: block;
+      height: auto;
+      padding: 3px;
+      margin-top: 5px;
+      letter-spacing: 5px;
+      word-spacing: 10px;
+      line-height: 18px;
+      text-align: center;
+      text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-position: 0% 100%;
+      background-repeat: no-repeat;
+      background-size: 0% 2px;
+      transition: background-size 1s; }
+    nav ul li:hover, nav ul li:visited, nav ul li:link {
+      color: #77c9ff;
+      background-size: 100% 2px; }
+
+.carrusel {
+  color: rgba(0, 0, 0, 0.836);
+  background-color: rgba(255, 255, 255, 0.342); }
+
+aside {
+  margin-top: 5%; }
+
+section {
+  width: 100%;
+  margin-top: 20px; }
+  section p {
+    margin: 3px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    line-height: 18px;
+    text-align: center; }
+
+footer {
+  text-align: center; }
+
+#carouselExampleCaptions {
+  width: 600px; }
+
+/***************** Flexbox y Grid *****************/
+.inicio {
+  display: inline; }
+
+nav {
+  grid-area: menu;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+aside {
+  grid-area: aside;
+  display: flex;
+  justify-content: center;
+  align-content: center; }
+
+article {
+  grid-area: articulo; }
+
+footer {
+  grid-area: pie; }
+
+#indexHeader {
+  grid-area: cabeza;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+#gridIndex {
+  display: grid;
+  grid-template-areas: "cabeza cabeza cabeza" "menu menu menu" "aside aside aside" "articulo articulo articulo" "pie pie pie";
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center; }

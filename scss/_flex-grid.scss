@@ -1,0 +1,53 @@
+// Flexbox y Grid
+
+/***************** Flexbox y Grid *****************/
+
+.inicio {
+    display: inline;
+}
+
+nav {
+    grid-area:menu;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
+
+aside { 
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+article {
+    grid-area: articulo;
+}
+
+footer { 
+    grid-area: pie;
+}
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+#gridIndex {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza cabeza cabeza"
+    "menu menu menu"
+    "aside aside aside"
+    "articulo articulo articulo"
+    "pie pie pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
