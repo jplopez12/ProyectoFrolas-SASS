@@ -2,6 +2,14 @@
 
 /***************** Flexbox y Grid *****************/
 
+h1, .titulo {
+    grid-area: titulo;
+}
+
+h2, .subtitulo {
+    grid-area: subtitulo;
+}
+
 .inicio {
     display: inline;
 }
@@ -28,6 +36,8 @@ footer {
     grid-area: pie;
 }
 
+/***************** Index *****************/
+
 #indexHeader {
     grid-area: cabeza;
     display: flex;
@@ -46,6 +56,121 @@ footer {
     "articulo articulo articulo"
     "pie pie pie"
     ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.generalHeader {
+    grid-area: cabezaGeneral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/***************** Productos *****************/
+
+#containerProductos {
+    grid-area: productos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+
+    .productos {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    }
+
+    .botonCompra {
+        grid-area: boton;
+    }
+}
+
+#gridProductos {
+    display: grid;
+
+    grid-template-areas:
+    "cabezaGeneral cabezaGeneral cabezaGeneral"
+    "menu menu menu"
+    "productos productos productos"
+    "pie pie pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    ;
+}
+
+
+/***************** Contactos *****************/
+
+#containerContactos {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+.contacto-ig, .contacto-maps, .contacto-wpp, .contacto-mail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} 
+
+.contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact_form{  
+    grid-area: formulario;
+}
+
+#gridContacto {
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral cabezaGeneral cabezaGeneral"
+    "menu menu menu"
+    "contacto contacto contacto"
+    "pie pie pie";
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+/***************** Ventas *****************/
+
+#containerVentas {
+    grid-area: ventas;
+    display: flex;
+    flex-direction: column;
+}
+
+#gridVentas {   
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral cabezaGeneral cabezaGeneral"
+    "menu menu menu"
+    "ventas ventas ventas"
+    "pie pie pie";
 
     grid-template-columns: auto;
     grid-template-rows: auto;
