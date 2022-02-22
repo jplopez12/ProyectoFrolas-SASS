@@ -10,17 +10,6 @@ h2, .subtitulo {
     grid-area: subtitulo;
 }
 
-.inicio {
-    display: inline;
-}
-
-nav {
-    grid-area:menu;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-}
-
 aside { 
     grid-area: aside;
     display: flex;
@@ -36,7 +25,428 @@ footer {
     grid-area: pie;
 }
 
-/***************** Index *****************/
+@media screen and (max-width: 480px) {
+
+/** Index **/
+
+nav .nav {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-end;
+    justify-content:center;
+    padding: 20px, 0px, 20px, 0px;
+    width: fit-content;
+    height: fit-content;
+}
+
+main {
+    grid-area: contenido;
+    width: 95%;
+}
+
+#carouselExampleCaptions {
+    width: auto;
+}
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+#gridIndex {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza"
+    "menu"
+    "contenido"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center
+}
+
+.generalHeader {
+    grid-area: cabezaGeneral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/** Productos **/
+
+#containerProductos {
+    grid-area: productos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+
+    .productos {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    }
+
+    .botonCompra {
+        grid-area: boton;
+    }
+}
+
+#gridProductos {
+    display: grid;
+
+    grid-template-areas:
+    "cabezaGeneral"
+    "menu"
+    "productos"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+    ;
+}
+
+
+/** Contactos **/
+
+#containerContactos {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+}
+
+.contacto-ig, .contacto-maps, .contacto-wpp, .contacto-mail {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} 
+
+.contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact_form{  
+    grid-area: formulario;
+    width: 80%;
+    padding: 0px;
+}
+
+input {   
+    width: 95%; 
+}
+
+textarea{
+    width: 95%;
+}
+
+button {
+    width: 95%;
+}
+
+#gridContacto {
+    display: grid;
+
+    grid-template-areas:
+    "cabezaGeneral"
+    "menu"
+    "contacto"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+/** Ventas **/
+
+#containerVentas {
+    grid-area: ventas;
+    display: flex;
+    flex-direction: column;
+}
+
+#gridVentas {   
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral"
+    "menu"
+    "ventas"
+    "pie";
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+/** Realizar compra **/
+
+.cuadro {
+    width: 80%;
+  }
+
+.form {
+    width: 80%;
+  }
+
+#containerCompra {
+    grid-area: compra;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gridCompra {   
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral"
+    "menu"
+    "compra"
+    "pie";
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+
+/** Index **/
+
+nav .nav {
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+#indexHeader {
+    grid-area: cabeza;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} 
+
+#gridIndex {
+    display: grid;
+
+    grid-template-areas:
+    "cabeza"
+    "menu"
+    "contenido"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+.generalHeader {
+    grid-area: cabezaGeneral;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/** Productos **/
+
+#containerProductos {
+    grid-area: productos;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: fit-content;
+
+    .productos {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    }
+
+    .botonCompra {
+        grid-area: boton;
+    }
+}
+
+#gridProductos {
+    display: grid;
+
+    grid-template-areas:
+    "cabezaGeneral"
+    "menu"
+    "productos"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center
+    ;
+}
+
+
+/** Contactos **/
+
+#containerContactos {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: fit-content;
+}
+
+.contacto-ig, .contacto-maps, .contacto-wpp, .contacto-mail {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+} 
+
+.contacto {
+    grid-area: contacto;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-self: stretch;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.contact_form{  
+    grid-area: formulario;
+    width: 80%;
+}
+
+input {   
+    width: 95%; 
+}
+
+textarea{
+    width: 95%;
+}
+
+button {
+    width: 95%;
+}
+
+#gridContacto {
+    display: grid;
+
+    grid-template-areas:
+    "cabezaGeneral"
+    "menu"
+    "contacto"
+    "pie"
+    ;
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+/** Ventas **/
+
+#containerVentas {
+    grid-area: ventas;
+    display: flex;
+    flex-direction: column;
+}
+
+#gridVentas {   
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral"
+    "menu"
+    "ventas"
+    "pie";
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+/** Realizar compra **/
+
+#containerCompra {
+    grid-area: compra;
+    display: flex;
+    flex-direction: column;
+}
+
+#gridCompra {   
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral"
+    "menu"
+    "compra"
+    "pie";
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+}    
+
+@media screen and (min-width: 1024px) {
+
+/** Index **/
+
+.inicio {
+    display: inline;
+}
+
+nav {
+    grid-area:menu;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+}
 
 #indexHeader {
     grid-area: cabeza;
@@ -71,7 +481,7 @@ footer {
     
 }
 
-/***************** Productos *****************/
+/** Productos **/
 
 #containerProductos {
     grid-area: productos;
@@ -109,7 +519,7 @@ footer {
 }
 
 
-/***************** Contactos *****************/
+/** Contactos **/
 
 #containerContactos {
     grid-area: contacto;
@@ -139,6 +549,19 @@ footer {
 
 .contact_form{  
     grid-area: formulario;
+    width: 460px; 
+}
+
+input {   
+    width: 460px; 
+}
+
+textarea{
+    width: 460px;
+}
+
+button {
+    width: 460px;
 }
 
 #gridContacto {
@@ -155,7 +578,7 @@ footer {
     justify-items: center;
 }
 
-/***************** Ventas *****************/
+/** Ventas **/
 
 #containerVentas {
     grid-area: ventas;
@@ -176,3 +599,28 @@ footer {
     grid-template-rows: auto;
     justify-items: center;
 }
+
+/** Realizar compra **/
+
+#containerCompra {
+    grid-area: compra;
+    display: flex;
+    flex-direction: column;
+}
+
+#gridCompra {   
+    display: grid;
+
+    grid-template-areas: 
+    "cabezaGeneral cabezaGeneral cabezaGeneral"
+    "menu menu menu"
+    "compra compra compra"
+    "pie pie pie";
+
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    justify-items: center;
+}
+
+}
+

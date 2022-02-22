@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/jplopez12/Proyecto-Frolas.git"
   },
-  "author": "",
+  "author": "Lopez Juan Pablo",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/jplopez12/Proyecto-Frolas/issues"
@@ -304,5 +304,5 @@
     "yargs": "^17.3.1",
     "yargs-parser": "^20.2.9"
   },
-  "description": ""
+  "description": "pagina de pastelería artesanal"
 }
