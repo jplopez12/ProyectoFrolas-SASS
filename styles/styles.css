@@ -12,10 +12,13 @@ h1, .titulo {
 h2, .subtitulo {
   color: black;
   font-family: 'Licorice', cursive;
-  font-size: 22px; }
+  font-size: 26px; }
+
+.subtitulo {
+  color: white; }
 
 h3 {
-  color: black;
+  color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px; }
 
@@ -27,7 +30,7 @@ nav {
   nav ul {
     padding-left: 0px; }
     nav ul li {
-      color: #f7a0fa;
+      color: #77c9ff;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 14px; }
 
@@ -118,6 +121,7 @@ nav {
       color: #77c9ff;
       background-size: 100% 2px; }
 
+/***************** Index *****************/
 .carrusel {
   color: rgba(0, 0, 0, 0.836);
   background-color: rgba(255, 255, 255, 0.342); }
@@ -135,6 +139,9 @@ section {
     line-height: 18px;
     text-align: center; }
 
+.imgArticleIndex {
+  width: 100%; }
+
 footer {
   text-align: center; }
 
@@ -143,6 +150,8 @@ footer {
 
 /***************** Productos *****************/
 #containerProductos .itemProductos {
+  color: black;
+  font-size: 20px;
   margin-top: 2%;
   list-style: none;
   background-color: white;
@@ -158,10 +167,14 @@ footer {
   background-color: white; }
 
 #containerProductos .card {
-  justify-content: center; }
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  transition: .3s ease-in-out; }
 
 #containerProductos .card:hover {
-  background-color: rgba(231, 231, 231, 0.233); }
+  background-color: rgba(231, 231, 231, 0.233);
+  transform: scale(1.05); }
 
 #containerProductos .card-body {
   padding-top: 1rem;
@@ -193,7 +206,7 @@ footer {
 
 /***************** Contacto *****************/
 .contacto-ig {
-  color: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); }
+  color: #941194; }
 
 .contacto-maps {
   color: #217cb8; }
@@ -264,7 +277,7 @@ button p {
   color: white; }
 
 span {
-  color: #f7a0fa; }
+  color: black; }
 
 .aviso {
   font-size: 13px;
@@ -305,12 +318,23 @@ span {
   outline: 0;
   border: 1px solid #77c9ff; }
 
-/***************** Formulario de contacto *****************/
 .cuadro {
   width: auto; }
 
 .form {
   width: auto; }
+
+/***************** Ventas *****************/
+#info p {
+  color: black; }
+
+.iconoVentas {
+  height: 150px;
+  width: 150px; }
+
+/***************** Realizar compra *****************/
+#containerCompra .formCompra {
+  width: 100%; }
 
 /***************** Flexbox y Grid *****************/
 h1, .titulo {
@@ -431,6 +455,12 @@ footer {
     grid-area: ventas;
     display: flex;
     flex-direction: column; }
+  .medioPago-Icono {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
   #gridVentas {
     display: grid;
     grid-template-areas: "cabezaGeneral" "menu" "ventas" "pie";
@@ -547,6 +577,12 @@ footer {
     grid-area: ventas;
     display: flex;
     flex-direction: column; }
+  .medioPago-Icono {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; }
   #gridVentas {
     display: grid;
     grid-template-areas: "cabezaGeneral" "menu" "ventas" "pie";
@@ -653,6 +689,18 @@ footer {
     grid-area: ventas;
     display: flex;
     flex-direction: column; }
+  .medioPago {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2%; }
+    .medioPago .medioPago-Icono {
+      margin-top: 2%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center; }
   #gridVentas {
     display: grid;
     grid-template-areas: "cabezaGeneral cabezaGeneral cabezaGeneral" "menu menu menu" "ventas ventas ventas" "pie pie pie";
@@ -664,6 +712,10 @@ footer {
     grid-area: compra;
     display: flex;
     flex-direction: column; }
+  .formCompra {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   #gridCompra {
     display: grid;
     grid-template-areas: "cabezaGeneral cabezaGeneral cabezaGeneral" "menu menu menu" "compra compra compra" "pie pie pie";

@@ -192,6 +192,14 @@ button {
     flex-direction: column;
 }
 
+.medioPago-Icono {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
 #gridVentas {   
     display: grid;
 
@@ -395,6 +403,15 @@ button {
     flex-direction: column;
 }
 
+    .medioPago-Icono {    
+        margin-top: 5%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+
 #gridVentas {   
     display: grid;
 
@@ -586,6 +603,21 @@ button {
     flex-direction: column;
 }
 
+.medioPago {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 2%;
+    .medioPago-Icono {
+        margin-top: 2%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
 #gridVentas {   
     display: grid;
 
@@ -606,6 +638,12 @@ button {
     grid-area: compra;
     display: flex;
     flex-direction: column;
+}
+
+.formCompra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #gridCompra {   

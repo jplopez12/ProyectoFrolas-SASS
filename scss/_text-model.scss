@@ -70,6 +70,8 @@ nav{
             }          
     }
 
+/***************** Index *****************/
+
 .carrusel {
     color: rgba(0, 0, 0, 0.836);
     background-color: rgba(255, 255, 255, 0.342);
@@ -91,6 +93,11 @@ section {
         }
 }
 
+.imgArticleIndex {
+  width: 100%;
+  
+}
+
 footer { 
     text-align: center;
 }
@@ -103,6 +110,8 @@ footer {
 
 #containerProductos {
     .itemProductos {
+        color: $color-terciario;
+        font-size: 20px;
         margin-top: 2%;
         list-style: none;
         background-color: $color-primario;
@@ -120,10 +129,14 @@ footer {
 
     .card {
         justify-content: center;
+        overflow: hidden;
+        position: relative;
+        transition: .3s ease-in-out;
     }
     .card:hover {
         background-color: rgba(231, 231, 231, 0.233);
-    }
+        transform: scale(1.05);
+      }
 
     .card-link {
         @extend .botonCompra;
@@ -167,7 +180,7 @@ footer {
 /***************** Contacto *****************/
 
 $colors: (
- ig: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%),
+ ig: rgb(148, 17, 148),
  maps:  #217cb8,
  wpp: #00bb2d,
  mail: grey,
@@ -257,7 +270,7 @@ $colors: (
   
   
   span{
-    color: $color-secundario; 
+    color: $color-terciario; 
   }
   
   
@@ -311,7 +324,6 @@ $colors: (
     border: 1px solid $color-hover;
   }
 
-/***************** Formulario de contacto *****************/
 
 .cuadro {
   width: auto;
@@ -319,4 +331,28 @@ $colors: (
 
 .form {
   width: auto;
+}
+
+/***************** Ventas *****************/
+
+#info {
+  p {
+    color: $color-terciario;
+  }
+}
+
+@mixin sizes2($width, $height) {
+  height: $height;
+  width: $width;
+}
+.iconoVentas {
+  @include sizes2(150px, 150px);
+}
+
+/***************** Realizar compra *****************/
+
+#containerCompra {
+  .formCompra {
+    width: 100%;
+  }
 }
